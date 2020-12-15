@@ -17,14 +17,14 @@ void main() {
     url = faker.internet.httpsUrl();
     sut = RemoteAuthentication(httpClient: httpClient, url: url);
   });
-  test("Should call HttpClient with correct values", () async {
+  test("Should throw UnexpectedError if HttpClient returns 400", () async {
+    when(httpClient.request(url: anyNamed('url'), method: anyNamed('method')))
+        .thenThrow(HttpError.badRequest);
+
     final params = AuthenticationParams(
         email: faker.internet.email(), password: faker.internet.password());
-    await sut.auth(params);
+    final future = sut.auth(params);
 
-    verify(httpClient.request(
-        url: url,
-        method: 'post',
-        body: {'email': params.email, 'password': params.password}));
+    expect(future, matcher);
   });
 }
