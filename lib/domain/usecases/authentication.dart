@@ -1,4 +1,4 @@
-import 'package:aula_flutter_dev/domain/account_entity.dart';
+import 'package:aula_flutter_dev/domain/entities/account_entity.dart';
 
 import 'package:meta/meta.dart';
 

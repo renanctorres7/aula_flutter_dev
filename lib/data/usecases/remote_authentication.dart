@@ -1,6 +1,6 @@
 import 'package:aula_flutter_dev/data/http/http.dart';
 import 'package:aula_flutter_dev/data/models/models.dart';
-import 'package:aula_flutter_dev/domain/account_entity.dart';
+import 'package:aula_flutter_dev/domain/entities/entities.dart';
 import 'package:aula_flutter_dev/domain/helpers/helpers.dart';
 
 import 'package:meta/meta.dart';
