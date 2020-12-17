@@ -1,5 +1,6 @@
 import 'package:aula_flutter_dev/data/http/http.dart';
 import 'package:aula_flutter_dev/data/usecases/remote_authentication.dart';
+import 'package:aula_flutter_dev/domain/helpers/helpers.dart';
 import 'package:aula_flutter_dev/domain/usecases/authentication.dart';
 import 'package:test/test.dart';
 import 'package:mockito/mockito.dart';
@@ -25,6 +26,6 @@ void main() {
         email: faker.internet.email(), password: faker.internet.password());
     final future = sut.auth(params);
 
-    expect(future, matcher);
+    expect(future, throwsA(DomainError.unexpected));
   });
 }
