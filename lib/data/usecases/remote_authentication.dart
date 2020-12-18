@@ -6,7 +6,7 @@ import 'package:aula_flutter_dev/domain/helpers/helpers.dart';
 import 'package:meta/meta.dart';
 import 'package:aula_flutter_dev/domain/usecases/authentication.dart';
 
-class RemoteAuthentication {
+class RemoteAuthentication implements Authentication {
   final HttpClient httpClient;
   final String url;
 
