@@ -13,7 +13,9 @@
         }, {
             "name": "aula_flutter_dev",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program": "lib/main/main.dart"
+    
         }, 
     ]
 }
