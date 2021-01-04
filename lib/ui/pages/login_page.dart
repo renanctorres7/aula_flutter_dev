@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        labelText: 'E-mail',
+                        labelText: 'Email',
                         icon: Icon(Icons.email),
                       ),
                       keyboardType: TextInputType.emailAddress,
@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     RaisedButton(
-                      onPressed: () {},
+                      onPressed: null,
                       child: Text('Entrar'.toUpperCase()),
                     ),
                     FlatButton.icon(
