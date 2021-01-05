@@ -38,7 +38,7 @@ class App extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20))),
       ),
-      home: LoginPage(),
+      home: LoginPage(null),
     );
   }
 }

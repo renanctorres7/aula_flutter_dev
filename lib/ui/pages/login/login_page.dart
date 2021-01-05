@@ -1,7 +1,13 @@
 import 'package:aula_flutter_dev/ui/components/component.dart';
+import 'package:aula_flutter_dev/ui/pages/pages.dart';
 import 'package:flutter/material.dart';
+import 'login_presenter.dart';
 
 class LoginPage extends StatelessWidget {
+  final LoginPresenter presenter;
+
+  LoginPage(this.presenter);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +30,7 @@ class LoginPage extends StatelessWidget {
                         icon: Icon(Icons.email),
                       ),
                       keyboardType: TextInputType.emailAddress,
+                      onChanged: presenter.validateEmail,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 8, bottom: 32),
@@ -33,6 +40,7 @@ class LoginPage extends StatelessWidget {
                           icon: Icon(Icons.lock),
                         ),
                         obscureText: true,
+                        onChanged: presenter.validatePassword,
                       ),
                     ),
                     RaisedButton(
